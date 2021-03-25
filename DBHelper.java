@@ -20,7 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
         // выполняется, если базы данных нет
         db.execSQL(CREATE);
         db.execSQL("INSERT INTO products VALUES (1, 'pion', 300, 'https://centre-flower.ru/wp-content/uploads/p/2/9/7/4/2974-Pion-Sara-Bernar.jpg' )," +
-                "(2, 'rose', 600, 'https://pocvetam.ru/wp-content/uploads/2020/08/1-roza-1.jpg' )");
+                "(2, 'rose', 600, 'https://pocvetam.ru/wp-content/uploads/2020/08/1-roza-1.jpg' );");
 
     }
 
