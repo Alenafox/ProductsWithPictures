@@ -27,18 +27,18 @@ public class ProductsAdapter extends SimpleCursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
+        //TextView tvId = view.findViewById(R.id.id);
         ImageView picture = view.findViewById(R.id.picture);
         TextView tvName = view.findViewById(R.id.name);
         TextView tvPrice = view.findViewById(R.id.price);
-        TextView tvCategory = view.findViewById(R.id.category);
 
         String name = cursor.getString(cursor.getColumnIndex("name"));
-        String category = cursor.getString(cursor.getColumnIndex("category"));
         int price = cursor.getInt(cursor.getColumnIndex("price"));
+        int id = cursor.getInt(cursor.getColumnIndex("price"));
         String url = cursor.getString(cursor.getColumnIndex("picture"));
 
         tvName.setText(name);
-        tvCategory.setText(category);
+        //tvId.setText(Integer.toString(id));
         tvPrice.setText(Integer.toString(price));
 
         picture.setImageResource(R.drawable.user_unknown);
