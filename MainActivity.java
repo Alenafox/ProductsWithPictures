@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         Cursor p = productsDB.rawQuery("SELECT * FROM products", null);
         products_list = p.getColumnNames();
-        int[] views = { R.id.id, R.id.name,R.id.category, R.id.price, R.id.picture };
+        int[] views = { R.id.id, R.id.name, R.id.price, R.id.picture };
         ProductsAdapter adapter = new ProductsAdapter(this, R.layout.item, p, products_list, views,0);
         lv.setAdapter(adapter);
     }
