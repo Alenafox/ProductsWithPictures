@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
     final static String DB_NAME = "products.db";
     final static String TABLE_NAME = "products";
-    final static String CREATE = "CREATE TABLE "+TABLE_NAME+ "( `id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `category` TEXT NOT NULL, `price` INTEGER NOT NULL, `picture` TEXT NOT NULL)";
+    final static String CREATE = "CREATE TABLE "+TABLE_NAME+ "( `id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `price` INTEGER NOT NULL, `picture` TEXT NOT NULL)";
     // при изменении структуры БД меняется и версия
     private static final int DATABASE_VERSION = 10;
 
@@ -19,8 +19,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // выполняется, если базы данных нет
         db.execSQL(CREATE);
-        db.execSQL("INSERT INTO products VALUES (1, 'pion','garden flowers', 300, 'https://centre-flower.ru/wp-content/uploads/p/2/9/7/4/2974-Pion-Sara-Bernar.jpg' )," +
-                "(2, 'rose','garden flowers', 600, 'https://pocvetam.ru/wp-content/uploads/2020/08/1-roza-1.jpg' )");
+        db.execSQL("INSERT INTO products VALUES (1, 'pion', 300, 'https://centre-flower.ru/wp-content/uploads/p/2/9/7/4/2974-Pion-Sara-Bernar.jpg' )," +
+                "(2, 'rose', 600, 'https://pocvetam.ru/wp-content/uploads/2020/08/1-roza-1.jpg' )");
 
     }
 
