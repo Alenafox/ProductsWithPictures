@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
     final static String DB_NAME = "products.db";
     final static String TABLE_NAME = "products";
-    final static String CREATE = "CREATE TABLE "+TABLE_NAME+ "( `id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `price` INTEGER NOT NULL, `picture` TEXT NOT NULL)";
+    final static String CREATE = "CREATE TABLE "+TABLE_NAME+ "( `_id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `price` INTEGER NOT NULL, `picture` TEXT NOT NULL)";
     // при изменении структуры БД меняется и версия
     private static final int DATABASE_VERSION = 10;
 
