@@ -21,9 +21,12 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase productsDB = helper.getWritableDatabase();
 
         Cursor p = productsDB.rawQuery("SELECT * FROM products", null);
+        int count = p.getCount();
+        Log.d("mytag", "count: " + count);
         products_list = p.getColumnNames();
         int[] views = { R.id.id, R.id.name, R.id.price, R.id.picture };
-        ProductsAdapter adapter = new ProductsAdapter(this, R.layout.item, p, products_list, views,0);
+
+        ProductsAdapter adapter = new ProductsAdapter(this, R.layout.item, p, products_list, views);
         lv.setAdapter(adapter);
     }
 }
